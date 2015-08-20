@@ -24,7 +24,7 @@ for test in TESTS:
 
 # Targets that format code.
 
-additions = ['include/heman.h'] + Glob('test/*.c')
+additions = ['include/heman.h'] + Glob('test/*.c') + Glob('bindings/*.?pp')
 exclusions = Glob('src/noise.*')
 cfiles = Glob('src/*.c') + Glob('src/*.h') + additions
 cfiles = list(set(cfiles) - set(exclusions))
